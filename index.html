@@ -15,8 +15,10 @@
       <a href="#!" class="brand-logo center">Evans Library Tables</a>
     </div>
   </nav>
+
   <br>
 
+  <!-- Carousel -->
   <div class="container">
     <div class="carousel carousel-slider z-depth-5">
       <!-- ID: 0 -->
@@ -37,6 +39,7 @@
       </a>
     </div>
   </div>
+
   <div class="container" id="main">
     <div class="col s12 m7">
       <div class="card">
@@ -70,17 +73,9 @@
               </thead>
 
               <tbody>
-                <tr>
-                  <td>Alvin</td>
-                  <td>Eclair</td>
-                </tr>
-                <tr>
-                  <td>Alan</td>
-                  <td>Jellybean</td>
-                </tr>
-                <tr>
-                  <td>Jonathan</td>
-                  <td>Lollipop</td>
+                <tr v-for="table in tableData[activeTab]">
+                  <th>{{ table.name }}</th>
+                  <th>{{ table.status }}</th>
                 </tr>
               </tbody>
             </table>
