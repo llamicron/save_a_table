@@ -4,7 +4,8 @@ var app = new Vue({
   el: "#main",
   data: {
     activeTab: "floor3",
-    imagePath: "images/floor3.png",
+    onlyShowVacancy: false,
+
     tableData: {
       floor3: [
         { "name": "Table 1", "status": "Occupied" },
@@ -47,6 +48,27 @@ var app = new Vue({
       // Get the floor number and subtract 3 to make up for the index offset
       var index = this.activeTab.replace(/^\D+/g, '') - 3;
       $('.carousel').carousel('set', index);
+    },
+    vacantTables() {
+      var vacantTables = [];
+      this.tableData[this.activeTab].forEach(function(obj) {
+        if (obj.status == 'Vacant') {
+          vacantTables.push(obj);
+        }
+      }, this);
+      return vacantTables;
+    },
+
+    allTables() {
+      return this.tableData[this.activeTab];
+    },
+
+    tables() {
+      if (this.onlyShowVacancy) {
+        return this.vacantTables();
+      } else {
+        return this.allTables();
+      }
     }
   }
 });

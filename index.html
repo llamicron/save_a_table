@@ -12,6 +12,7 @@
       color: #fafafa;
       background-color: #500000;
     }
+
     .vacant {
       color: #fafafa;
       background-color: #2196f3;
@@ -73,6 +74,15 @@
                 </li>
               </ul>
             </div>
+            <br>
+            <div class="row">
+              <div class="col s3">
+                <input type="checkbox" @click="onlyShowVacancy = !onlyShowVacancy" id="onlyShowVacancySwitch" />
+                <label for="onlyShowVacancySwitch">
+                   Only show vacancy
+                </label>
+              </div>
+            </div>
             <!-- Table -->
             <!-- <div class="container"> -->
             <table class="highlight responsive-table striped">
@@ -84,11 +94,13 @@
               </thead>
 
               <tbody>
-                <tr v-for="table in tableData[activeTab]">
+                <tr v-for="table in tables()">
                   <th>{{ table.name }}</th>
-                  <th><div class="chip" :class="{ 'occupied': table.status == 'Occupied', 'vacant': table.status == 'Vacant' }">
-                    <h6>{{ table.status }}</h6>
-                  </div></th>
+                  <th>
+                    <div class="chip" :class="{ 'occupied': table.status == 'Occupied', 'vacant': table.status == 'Vacant' }">
+                      <h6>{{ table.status }}</h6>
+                    </div>
+                  </th>
                 </tr>
               </tbody>
             </table>
