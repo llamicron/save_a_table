@@ -7,6 +7,17 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
 
+  <style>
+    .occupied {
+      color: #fafafa;
+      background-color: #500000;
+    }
+    .vacant {
+      color: #fafafa;
+      background-color: #2196f3;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -23,7 +34,7 @@
     <div class="carousel carousel-slider z-depth-5">
       <!-- ID: 0 -->
       <a class="carousel-item" href="#!">
-        <img class="materialboxed" src="images/floor3.png">
+        <img src="images/floor3.png">
       </a>
       <!-- ID: 1 -->
       <a class="carousel-item" href="#!">
@@ -75,7 +86,9 @@
               <tbody>
                 <tr v-for="table in tableData[activeTab]">
                   <th>{{ table.name }}</th>
-                  <th>{{ table.status }}</th>
+                  <th><div class="chip" :class="{ 'occupied': table.status == 'Occupied', 'vacant': table.status == 'Vacant' }">
+                    <h6>{{ table.status }}</h6>
+                  </div></th>
                 </tr>
               </tbody>
             </table>
