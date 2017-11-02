@@ -71,4 +71,8 @@ var app = new Vue({
       }
     }
   }
+
+  // mounted: function() {
+  //   // Get data from Flask
+  // }
 });
