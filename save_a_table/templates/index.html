@@ -2,11 +2,15 @@
 
 <head>
   <title>Save A Table</title>
-  <link rel="stylesheet" href="css/sass/materialize.css">
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="(( url_for('static', filename='css/sass/materialize.css') ))">
+  <!-- Materialize Fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <link rel="shortcut icon" href="images/table.ico">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="(( url_for('static', filename='images/table.ico') ))">
 
+  <!-- Vue -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
 
   <style>
@@ -41,16 +45,16 @@
   <div class="container">
     <div class="carousel carousel-slider z-depth-5">
       <a class="carousel-item" href="#!">
-        <img src="images/floor3.png">
+        <img src="(( url_for('static', filename='images/floor3.png') ))">
       </a>
       <a class="carousel-item" href="#!">
-        <img src="images/floor4.png">
+        <img src="(( url_for('static', filename='images/floor4.png') ))">
       </a>
       <a class="carousel-item" href="#!">
-        <img src="images/floor5.png">
+        <img src="(( url_for('static', filename='images/floor5.png') ))">
       </a>
       <a class="carousel-item" href="#!">
-        <img src="images/floor6.png">
+        <img src="(( url_for('static', filename='images/floor6.png') ))">
       </a>
     </div>
   </div>
@@ -113,10 +117,12 @@
   </div>
 
 
+  <!-- Jquery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-
-  <script src="js/main.js"></script>
+  <!-- Materialize JS -->
+  <script src="(( url_for('static', filename='js/materialize.js') ))"></script>
+  <!-- Custom JS -->
+  <script src="(( url_for('static', filename='js/main.js') ))"></script>
 </body>
 
 </html>
