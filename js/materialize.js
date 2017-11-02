@@ -9415,7 +9415,9 @@ if (Vel) {
             view.on('touchend.carousel', release);
           }
           view.on('mousedown.carousel', tap);
-          view.on('mousemove.carousel', drag);
+          // Changed by @llamicron
+          // Disables swiping on slider carousel
+          // view.on('mousemove.carousel', drag);
           view.on('mouseup.carousel', release);
           view.on('mouseleave.carousel', release);
           view.on('click.carousel', click);
