@@ -4,7 +4,7 @@ var app = new Vue({
   el: "#main",
   data: {
     activeTab: "floor3",
-    onlyShowVacancy: false,
+    onlyShowVacancy: true,
 
     tableData: {
       floor3: [

@@ -5,6 +5,8 @@
   <link rel="stylesheet" href="css/sass/materialize.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <link rel="shortcut icon" href="images/table.ico">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
 
   <style>
@@ -18,8 +20,12 @@
       background-color: #ffffff;
       border: 1px solid #500000;
     }
-  </style>
 
+    #onlyShowVacancySwitch {
+      color: #500000;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -34,19 +40,15 @@
   <!-- Carousel -->
   <div class="container">
     <div class="carousel carousel-slider z-depth-5">
-      <!-- ID: 0 -->
       <a class="carousel-item" href="#!">
         <img src="images/floor3.png">
       </a>
-      <!-- ID: 1 -->
       <a class="carousel-item" href="#!">
         <img src="images/floor4.png">
       </a>
-      <!-- ID: 2 -->
       <a class="carousel-item" href="#!">
         <img src="images/floor5.png">
       </a>
-      <!-- ID: 3 -->
       <a class="carousel-item" href="#!">
         <img src="images/floor6.png">
       </a>
@@ -78,14 +80,13 @@
             <br>
             <div class="row">
               <div class="col s3">
-                <input type="checkbox" @click="onlyShowVacancy = !onlyShowVacancy" id="onlyShowVacancySwitch" />
+                <input type="checkbox" checked @click="onlyShowVacancy = !onlyShowVacancy" id="onlyShowVacancySwitch" />
                 <label for="onlyShowVacancySwitch">
-                   Only show vacancy
+                  Only show vacancy
                 </label>
               </div>
             </div>
             <!-- Table -->
-            <!-- <div class="container"> -->
             <table class="highlight responsive-table striped">
               <thead>
                 <tr>
@@ -105,7 +106,6 @@
                 </tr>
               </tbody>
             </table>
-            <!-- </div> -->
           </div>
         </div>
       </div>
