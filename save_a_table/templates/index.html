@@ -6,30 +6,14 @@
   <link rel="stylesheet" href="(( url_for('static', filename='css/sass/materialize.css') ))">
   <!-- Materialize Fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="(( url_for('static', filename='css/styles.css') ))">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="(( url_for('static', filename='images/table.ico') ))">
 
   <!-- Vue -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
-
-  <style>
-    .occupied {
-      color: #fafafa;
-      background-color: #500000;
-    }
-
-    .vacant {
-      color: #500000;
-      background-color: #ffffff;
-      border: 1px solid #500000;
-    }
-
-    #onlyShowVacancySwitch {
-      color: #500000;
-    }
-
-  </style>
 </head>
 
 <body>
@@ -119,6 +103,8 @@
 
   <!-- Jquery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Axios -->
+  <script type="text/javascript" src="(( url_for('static', filename='js/axios.min.js') ))"></script>
   <!-- Materialize JS -->
   <script src="(( url_for('static', filename='js/materialize.js') ))"></script>
   <!-- Custom JS -->

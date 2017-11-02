@@ -1,0 +1,14 @@
+.occupied {
+  color: #fafafa;
+  background-color: #500000;
+}
+
+.vacant {
+  color: #500000;
+  background-color: #ffffff;
+  border: 1px solid #500000;
+}
+
+#onlyShowVacancySwitch {
+  color: #500000;
+}

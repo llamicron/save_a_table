@@ -5,37 +5,7 @@ var app = new Vue({
   data: {
     activeTab: "floor3",
     onlyShowVacancy: true,
-
-    tableData: {
-      floor3: [
-        { "name": "Table 1", "status": "Occupied" },
-        { "name": "Table 2", "status": "Vacant" },
-        { "name": "Table 3", "status": "Occupied" },
-        { "name": "Table 4", "status": "Vacant" },
-        { "name": "Table 5", "status": "Occupied" },
-      ],
-      floor4: [
-        { "name": "Table 1", "status": "Vacant" },
-        { "name": "Table 2", "status": "Vacant" },
-        { "name": "Table 3", "status": "Occupied" },
-        { "name": "Table 4", "status": "Occupied" },
-        { "name": "Table 5", "status": "Vacant" },
-      ],
-      floor5: [
-        { "name": "Table 1", "status": "Occupied" },
-        { "name": "Table 2", "status": "Vacant" },
-        { "name": "Table 3", "status": "Vacant" },
-        { "name": "Table 4", "status": "Occupied" },
-        { "name": "Table 5", "status": "Occupied" },
-      ],
-      floor6: [
-        { "name": "Table 1", "status": "Vacant" },
-        { "name": "Table 2", "status": "Occupied" },
-        { "name": "Table 3", "status": "Occupied" },
-        { "name": "Table 4", "status": "Vacant" },
-        { "name": "Table 5", "status": "Occupied" },
-      ]
-    }
+    tableData: null
   },
 
   methods: {
@@ -70,9 +40,16 @@ var app = new Vue({
         return this.allTables();
       }
     }
-  }
+  },
 
-  // mounted: function() {
-  //   // Get data from Flask
-  // }
+  mounted: function() {
+    axios.get('/tableData')
+      .then(response => {
+        this.tableData = response.data;
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+  }
 });

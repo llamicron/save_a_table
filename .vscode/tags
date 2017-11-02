@@ -4,4 +4,18 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+CustomFlask	../save_a_table/save_a_table.py	/^class CustomFlask(Flask):$/;"	kind:class	line:4
+Flask	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify$/;"	kind:namespace	line:1
+app	../save_a_table/save_a_table.py	/^app = CustomFlask(__name__)$/;"	kind:variable	line:16
+block_end_string	../save_a_table/save_a_table.py	/^        block_end_string='%)',$/;"	kind:variable	line:8
+block_start_string	../save_a_table/save_a_table.py	/^        block_start_string='(%',$/;"	kind:variable	line:7
+comment_end_string	../save_a_table/save_a_table.py	/^        comment_end_string='%>',$/;"	kind:variable	line:12
+comment_start_string	../save_a_table/save_a_table.py	/^        comment_start_string='<%',$/;"	kind:variable	line:11
+index	../save_a_table/save_a_table.py	/^def index():$/;"	kind:function	line:20
+jinja_options	../save_a_table/save_a_table.py	/^    jinja_options = Flask.jinja_options.copy()$/;"	kind:variable	line:5
+jsonify	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify$/;"	kind:namespace	line:1
+render_template	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify$/;"	kind:namespace	line:1
 save_a_table.py	../save_a_table/save_a_table.py	1;"	kind:file	line:1
+serveTableData	../save_a_table/save_a_table.py	/^def serveTableData():$/;"	kind:function	line:25
+variable_end_string	../save_a_table/save_a_table.py	/^        variable_end_string='))',$/;"	kind:variable	line:10
+variable_start_string	../save_a_table/save_a_table.py	/^        variable_start_string='((',$/;"	kind:variable	line:9
