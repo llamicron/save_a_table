@@ -28,6 +28,16 @@ class CustomFlask(Flask):
 
 app = CustomFlask(__name__)
 
+table_data = {
+    "floor3": [],
+    "floor4": [],
+    "floor5": [],
+    "floor6": []
+}
+for table in Table.select():
+    table_data[table.floor].append(
+        {"name": table.name, "status": table.status})
+
 
 @app.route('/')
 def index():

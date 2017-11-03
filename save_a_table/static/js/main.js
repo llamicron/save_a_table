@@ -9,16 +9,12 @@ var app = new Vue({
   },
 
   methods: {
-    setActiveTab(tabName) {
-      this.activeTab = tabName;
-      this.updateImage();
-      return true;
-    },
     updateImage() {
       // Get the floor number and subtract 3 to make up for the index offset
       var index = this.activeTab.replace(/^\D+/g, '') - 3;
       $('.carousel').carousel('set', index);
     },
+
     vacantTables() {
       var vacantTables = [];
       this.tableData[this.activeTab].forEach(function(obj) {
@@ -29,7 +25,7 @@ var app = new Vue({
       return vacantTables;
     },
 
-    allTables() {
+    allTablesForFloor() {
       return this.tableData[this.activeTab];
     },
 
@@ -37,7 +33,7 @@ var app = new Vue({
       if (this.onlyShowVacancy) {
         return this.vacantTables();
       } else {
-        return this.allTables();
+        return this.allTablesForFloor();
       }
     }
   },
@@ -51,5 +47,11 @@ var app = new Vue({
         console.log(error);
       });
 
+  },
+
+  watch: {
+    activeTab: function() {
+      this.updateImage();
+    }
   }
 });
