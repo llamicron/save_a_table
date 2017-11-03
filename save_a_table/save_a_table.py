@@ -2,8 +2,7 @@ from flask import Flask, render_template, jsonify
 from peewee import *
 from tables import Table
 
-
-db = SqliteDatabase('save_a_table.db')
+db = SqliteDatabase('save_a_table/db/save_a_table.db')
 
 def before_request_handler():
     database.connect()
