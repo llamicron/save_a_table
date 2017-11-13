@@ -5,7 +5,12 @@ var app = new Vue({
   data: {
     activeTab: "floor3",
     onlyShowVacancy: true,
-    tableData: null
+    tableData: {
+      "floor3": [],
+      "floor4": [],
+      "floor5": [],
+      "floor6": [],
+    }
   },
 
   methods: {
