@@ -40,18 +40,24 @@ var app = new Vue({
       } else {
         return this.allTablesForFloor();
       }
+    },
+
+    getTableData() {
+      axios.get('/tableData')
+        .then(response => {
+          this.tableData = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+        return true;
     }
   },
 
   mounted: function() {
-    axios.get('/tableData')
-      .then(response => {
-        this.tableData = response.data;
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
+    updateTableInterval = window.setInterval(function() {
+      app.getTableData();
+    }, 2000)
   },
 
   watch: {

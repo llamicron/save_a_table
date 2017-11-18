@@ -4,18 +4,34 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-CustomFlask	../save_a_table/save_a_table.py	/^class CustomFlask(Flask):$/;"	kind:class	line:4
-Flask	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify$/;"	kind:namespace	line:1
-app	../save_a_table/save_a_table.py	/^app = CustomFlask(__name__)$/;"	kind:variable	line:16
-block_end_string	../save_a_table/save_a_table.py	/^        block_end_string='%)',$/;"	kind:variable	line:8
-block_start_string	../save_a_table/save_a_table.py	/^        block_start_string='(%',$/;"	kind:variable	line:7
-comment_end_string	../save_a_table/save_a_table.py	/^        comment_end_string='%>',$/;"	kind:variable	line:12
-comment_start_string	../save_a_table/save_a_table.py	/^        comment_start_string='<%',$/;"	kind:variable	line:11
-index	../save_a_table/save_a_table.py	/^def index():$/;"	kind:function	line:20
-jinja_options	../save_a_table/save_a_table.py	/^    jinja_options = Flask.jinja_options.copy()$/;"	kind:variable	line:5
-jsonify	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify$/;"	kind:namespace	line:1
-render_template	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify$/;"	kind:namespace	line:1
+CustomFlask	../save_a_table/save_a_table.py	/^class CustomFlask(Flask):$/;"	kind:class	line:17
+Flask	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify, request$/;"	kind:namespace	line:1
+Meta	../save_a_table/tables.py	/^    class Meta:$/;"	kind:class	line:58
+Table	../save_a_table/save_a_table.py	/^from tables import Table$/;"	kind:namespace	line:3
+Table	../save_a_table/tables.py	/^class Table(Model):$/;"	kind:class	line:5
+after_request_handler	../save_a_table/save_a_table.py	/^def after_request_handler():$/;"	kind:function	line:10
+app	../save_a_table/save_a_table.py	/^app = CustomFlask(__name__)$/;"	kind:variable	line:29
+before_request_handler	../save_a_table/save_a_table.py	/^def before_request_handler():$/;"	kind:function	line:7
+block_end_string	../save_a_table/save_a_table.py	/^        block_end_string='%)',$/;"	kind:variable	line:21
+block_start_string	../save_a_table/save_a_table.py	/^        block_start_string='(%',$/;"	kind:variable	line:20
+comment_end_string	../save_a_table/save_a_table.py	/^        comment_end_string='%>',$/;"	kind:variable	line:25
+comment_start_string	../save_a_table/save_a_table.py	/^        comment_start_string='<%',$/;"	kind:variable	line:24
+database	../save_a_table/tables.py	/^        database = db$/;"	kind:variable	line:59
+db	../save_a_table/save_a_table.py	/^db = SqliteDatabase('save_a_table\/db\/save_a_table.db')$/;"	kind:variable	line:5
+db	../save_a_table/tables.py	/^db = SqliteDatabase('save_a_table\/db\/save_a_table.db')$/;"	kind:variable	line:3
+floor	../save_a_table/tables.py	/^    floor = CharField()$/;"	kind:variable	line:6
+index	../save_a_table/save_a_table.py	/^def index():$/;"	kind:function	line:43
+jinja_options	../save_a_table/save_a_table.py	/^    jinja_options = Flask.jinja_options.copy()$/;"	kind:variable	line:18
+jsonify	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify, request$/;"	kind:namespace	line:1
+name	../save_a_table/tables.py	/^    name = CharField()$/;"	kind:variable	line:7
+render_template	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify, request$/;"	kind:namespace	line:1
+request	../save_a_table/save_a_table.py	/^from flask import Flask, render_template, jsonify, request$/;"	kind:namespace	line:1
 save_a_table.py	../save_a_table/save_a_table.py	1;"	kind:file	line:1
-serveTableData	../save_a_table/save_a_table.py	/^def serveTableData():$/;"	kind:function	line:25
-variable_end_string	../save_a_table/save_a_table.py	/^        variable_end_string='))',$/;"	kind:variable	line:10
-variable_start_string	../save_a_table/save_a_table.py	/^        variable_start_string='((',$/;"	kind:variable	line:9
+seed	../save_a_table/tables.py	/^    def seed():$/;"	kind:member	line:13
+serve_table_data	../save_a_table/save_a_table.py	/^def serve_table_data():$/;"	kind:function	line:48
+status	../save_a_table/tables.py	/^    status = CharField()$/;"	kind:variable	line:10
+table_data	../save_a_table/save_a_table.py	/^table_data = {$/;"	kind:variable	line:31
+tables.py	../save_a_table/tables.py	1;"	kind:file	line:1
+update_table	../save_a_table/save_a_table.py	/^def update_table():$/;"	kind:function	line:62
+variable_end_string	../save_a_table/save_a_table.py	/^        variable_end_string='))',$/;"	kind:variable	line:23
+variable_start_string	../save_a_table/save_a_table.py	/^        variable_start_string='((',$/;"	kind:variable	line:22
