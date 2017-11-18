@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from peewee import *
 from tables import Table
 
@@ -45,7 +45,7 @@ def index():
 
 
 @app.route('/tableData', methods=["GET"])
-def serveTableData():
+def serve_table_data():
     table_data = {
         "floor3": [],
         "floor4": [],
@@ -58,6 +58,11 @@ def serveTableData():
 
 db.close()
 
+@app.route('/update-table', methods=["POST"])
+def update_table():
+	table_data = request.get_json()
+	# Make some changes to the db here
+	return "True"
 
 if __name__ == '__main__':
-    app.run()
+    app.run("0.0.0.0")
